@@ -1,0 +1,60 @@
+<ion-view view-title="HOME">
+    <ion-content>
+        <ol class="breadcrumb text-left datechanger">
+            <li>
+                  <div class="input-group">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ><i class="fa fa-calendar"></i></button>
+                      </span>
+                    <input type="text" name="daterange" daterangepicker id="eventDateRange" class="form-control text-center" datestart="selectedEvent.event_start_date" dateend="selectedEvent.event_end_date" placeholder=" Change Date Range" required autocomplete="off"  applychange="dateChanged(start_date, end_date);"/>
+                </div>
+            </li>
+        </ol>
+        <ion-list>
+            <ion-item>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-aqua">
+                        <span class="info-box-icon "><i class="ion ion-ios-gear-outline fa-spin"></i></span>
+                        <div class="info-box-content">
+                            <span class="info-box-text">Current Position</span>
+                            <span class="info-box-number">In Bus</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+            </ion-item>
+            <ion-item>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-green">
+                        <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
+                        <div class="info-box-content">
+                            <span class="info-box-text">Attendance</span>
+                            <span class="info-box-number">10 days</span>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                            <span class="progress-description">
+                                30% in last 30 Days
+                              </span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-yellow">
+                        <span class="info-box-icon"><i class="ion ion-ios-gear-outline"></i></span>
+                        <div class="info-box-content">
+                            <span class="info-box-text">CPU Traffic</span>
+                            <span class="info-box-number">90<small>%</small></span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

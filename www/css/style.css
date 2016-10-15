@@ -1,0 +1,58 @@
+/* Empty. Add your own CSS if you like */
+
+.menu .bar-header.header-color, ion-header-bar.bar-stable.header-color.bar.bar-header{
+	background-color: #367fa9;
+	color: #fff;
+}
+
+.bar.bar-stable .title, ion-header-bar.bar-stable.header-color.bar.bar-header .button-icon{
+	color: #fff;
+	text-align: center;
+}
+
+ion-list.side-panel .list ion-item, ion-list.side-panel .list ion-item .item-content {
+background-color: #222d32;
+    border: 0;
+    color: #fff;
+}
+
+ion-list.side-panel .list ion-item .item-content:hover{
+	    border-left: 3px solid transparent;
+
+}
+
+.warning-info{
+	position: absolute;
+    top: 9px;
+    right: 7px;
+    text-align: center ! important;
+    font-size: 9px ! important;
+    padding: 2px 3px ! important;
+    line-height: .9 ! important;
+}
+
+.warning-icon-anchor {
+	padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.menu .scroll-content{
+	background-color: #222d32;
+}
+
+.calendar .daterangepicker_input input, .calendar .daterangepicker_input i.fa-calendar{
+  height: 0;
+}
+
+.datechanger .input-group span.input-group-btn button,.datechanger .input-group input[type="text"].form-control,
+.datechanger .input-group input[type="text"].form-control::-webkit-input-placeholder/*,
+.datechanger .input-group input[type="text"].form-control:-moz-placeholder,
+.datechanger .input-group input[type="text"].form-control::-moz-placeholder,
+.datechanger .input-group input[type="text"].form-control:-ms-input-placeholder*/{
+ color: #367fa9;
+}
