@@ -1,5 +1,8 @@
 /* Empty. Add your own CSS if you like */
-
+.row{
+        margin-right: 0px ! important;
+    margin-left: 0px ! important;
+}
 .menu .bar-header.header-color, ion-header-bar.bar-stable.header-color.bar.bar-header{
 	background-color: #367fa9;
 	color: #fff;

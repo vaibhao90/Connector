@@ -1,16 +1,24 @@
 <ion-view view-title="HOME">
     <ion-content>
-        <ol class="breadcrumb text-left datechanger">
+        <!-- <ol class="breadcrumb text-left datechanger">
             <li>
-                  <div class="input-group">
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" ><i class="fa fa-calendar"></i></button>
-                      </span>
-                    <input type="text" name="daterange" daterangepicker id="eventDateRange" class="form-control text-center" datestart="selectedEvent.event_start_date" dateend="selectedEvent.event_end_date" placeholder=" Change Date Range" required autocomplete="off"  applychange="dateChanged(start_date, end_date);"/>
-                </div>
+                <button class="button" ng-click="openDatePicker()">From {{startDate |date:'MMMM/dd/yyyy' }} </button>
+               
+            </li>
+            <li>
+                <button class="button" ng-click="openDatePicker2()">To {{endDate |date:'MMMM/dd/yyyy' }} </button>
             </li>
         </ol>
-        <ion-list>
+ -->
+        
+         <ion-list>
+            <ion-item>
+                <button class="button" ng-click="openDatePicker()">From {{startDate |date:'MMMM/dd/yyyy' }} </button>
+            </ion-item>
+            <ion-item>
+                    <button class="button" ng-click="openDatePicker2()">To {{endDate |date:'MMMM/dd/yyyy' }} </button>
+            </ion-item>
+            
             <ion-item>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box bg-aqua">

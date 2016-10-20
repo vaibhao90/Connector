@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'ionic-datepicker'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -21,6 +21,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
 })
+.config(function (ionicDatePickerProvider) {
+    var datePickerObj = {
+      inputDate: new Date(),
+      titleLabel: 'Select a Date',
+      setLabel: 'Set',
+      todayLabel: 'Today',
+      closeLabel: 'Close',
+      mondayFirst: false,
+      weeksList: ["S", "M", "T", "W", "T", "F", "S"],
+      monthsList: ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+      templateType: 'popup',
+      from: new Date(2012, 8, 1),
+      to: new Date(2018, 8, 1),
+      showTodayButton: true,
+      dateFormat: 'dd MMMM yyyy',
+      closeOnSelect: false,
+      disableWeekdays: []
+    };
+    ionicDatePickerProvider.configDatePicker(datePickerObj);
+  })
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -71,50 +91,50 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
-})
+});
 
-.directive('daterangepicker', ['$parse', '$rootScope', function($parse, $rootScope) {
-    return {
-        restrict: 'A',
-        transclude: 'true',
-        scope: {
-            vdDateStart: '=?datestart',
-            vdDateEnd: '=?dateend',
-            applyChanges: '&applychange'
-        },
-        link: function(scope, element, attrs) {
-             element.daterangepicker({
-                        autoUpdateInput: false,
-                        maxDate: new Date(),
-                        locale: {
-                            cancelLabel: 'Clear',
-                            format: 'YYYY-MM-DD'
-                        }
-                    });
+// .directive('daterangepicker', ['$parse', '$rootScope', function($parse, $rootScope) {
+//     return {
+//         restrict: 'A',
+//         transclude: 'true',
+//         scope: {
+//             vdDateStart: '=?datestart',
+//             vdDateEnd: '=?dateend',
+//             applyChanges: '&applychange'
+//         },
+//         link: function(scope, element, attrs) {
+//              element.daterangepicker({
+//                         autoUpdateInput: false,
+//                         maxDate: new Date(),
+//                         locale: {
+//                             cancelLabel: 'Clear',
+//                             format: 'YYYY-MM-DD'
+//                         }
+//                     });
 
-              element.on('apply.daterangepicker', function(ev, picker) {
-                $(this).val(' From: ' + picker.startDate.format('YYYY-MM-DD') + ' To: ' + picker.endDate.format('YYYY-MM-DD'));
-                scope.$apply(function() {
-                    var date = { startDate: picker.startDate, endDate: picker.endDate };
-                    scope.vdDateEnd = date.endDate;
-                    scope.vdDateStart = date.startDate;
+//               element.on('apply.daterangepicker', function(ev, picker) {
+//                 $(this).val(' From: ' + picker.startDate.format('YYYY-MM-DD') + ' To: ' + picker.endDate.format('YYYY-MM-DD'));
+//                 scope.$apply(function() {
+//                     var date = { startDate: picker.startDate, endDate: picker.endDate };
+//                     scope.vdDateEnd = date.endDate;
+//                     scope.vdDateStart = date.startDate;
 
-                    scope.applyChanges({ start_date: picker.startDate.format('YYYY-MM-DD'), end_date: picker.endDate.format('YYYY-MM-DD') });
-                });
-            });
+//                     scope.applyChanges({ start_date: picker.startDate.format('YYYY-MM-DD'), end_date: picker.endDate.format('YYYY-MM-DD') });
+//                 });
+//             });
 
-            element.on('cancel.daterangepicker', function(ev, picker) {
+//             element.on('cancel.daterangepicker', function(ev, picker) {
 
-                $(this).val(' Change Date Range');
+//                 $(this).val(' Change Date Range');
 
-                var date = { startDate: '', endDate: '' };
-                scope.vdDateEnd = date.endDate;
-                scope.vdDateStart = date.startDate;
-                scope.applyChanges({ start_date: '', end_date: '' });
-            });
-       }      
-    }
-}]);
+//                 var date = { startDate: '', endDate: '' };
+//                 scope.vdDateEnd = date.endDate;
+//                 scope.vdDateStart = date.startDate;
+//                 scope.applyChanges({ start_date: '', end_date: '' });
+//             });
+//        }      
+//     }
+// }]);
 
 
 
