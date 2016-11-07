@@ -1,0 +1,29 @@
+<ion-view  style="background-color: aliceblue;">
+    <ion-content  class="login-page" style="height: 100%;background-color: aliceblue;">
+    	<ion-list style="height: 100%;">
+            <ion-item class="text-center" style="height: 30%;background-color: aliceblue;">
+            	<img src="img/books_read.jpg" alt="Hello" class="img-responsive img-circle" style="margin: 0 auto;">
+        	</ion-item>
+            <ion-item style="height: 60%;">
+                <form ng-submit="doLogin()" class="" style="margin-top: 20px;">
+                    <div class="list">
+                        <label class="item item-input">
+<!--                             <span class="input-label">Username</span>
+ -->                            <input type="text" ng-model="loginData.username" placeholder="Username">
+                        </label>
+                        <label class="item item-input">
+<!--                             <span class="input-label">Password</span>
+ -->                            <input type="password" ng-model="loginData.password" placeholder="password">
+                        </label>
+                        <label class="item">
+                            <button class="button button-block button-positive" type="submit">Log in</button>
+                        </label>
+                    </div>
+                </form>
+            </ion-item>
+           <!--  <ion-item class="text-center" style="height: 10%;">
+            	<img src="" alt="Hello">
+        	</ion-item> -->
+        </ion-list>
+    </ion-content>
+</ion-view>

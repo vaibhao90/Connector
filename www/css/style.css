@@ -1,11 +1,44 @@
 /* Empty. Add your own CSS if you like */
+
+/* Login Module */
+.login-modal{
+    display: block ! important;
+    top: 20% ! important;
+    width: 90%;    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Login Module End */
+
 .row{
         margin-right: 0px ! important;
     margin-left: 0px ! important;
 }
+
+.theme-color{
+
+}
+
+.header-color{
+
+}
+
+.left-navigation-color{
+
+}
+
+.right-navigation-color{
+
+}
+
 .menu .bar-header.header-color, ion-header-bar.bar-stable.header-color.bar.bar-header{
 	background-color: #367fa9;
 	color: #fff;
+}
+
+.login-page.has-header{
+    top: 0;
 }
 
 .bar.bar-stable .title, ion-header-bar.bar-stable.header-color.bar.bar-header .button-icon{
@@ -23,7 +56,13 @@ ion-list.side-panel .list ion-item .item-content:hover{
 	    border-left: 3px solid transparent;
 
 }
-
+.modal-backdrop{
+    /*opacity: 0.9;*/
+    background-color:#E0F0D3 ! important;
+}
+.modal {
+    background: rgba(0,0,0,0.0) ! important;
+}
 .warning-info{
 	position: absolute;
     top: 9px;

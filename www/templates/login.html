@@ -1,25 +1,31 @@
-<ion-modal-view>
-  <ion-header-bar>
+<ion-modal-view  class="login-modal">
+  <ion-header-bar ng-if="false">
     <h1 class="title">Login</h1>
     <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+      <button class="button button-clear" ng-click="closeLogin(loginData)">Close</button>
     </div>
   </ion-header-bar>
   <ion-content>
-    <form ng-submit="doLogin()">
-      <div class="list">
-        <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
-        </label>
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
-        </label>
-      </div>
+    <form ng-submit="doLogin(loginData)">
+     <ion-list style="height: 100%;">
+            <ion-item class="text-center" style="height: 30%;">
+              <img src="img/books_read.jpg" alt="Hello" class="img-responsive img-circle" style="margin: 0 auto;">
+          </ion-item>
+            <ion-item style="height: 60%;">
+                    <div class="list">
+                        <label class="item item-input">
+                          <input type="text" ng-model="loginData.username" placeholder="Username">
+                        </label>
+                        <label class="item item-input">
+                           <input type="password" ng-model="loginData.password" placeholder="password">
+                        </label>
+                        <label class="item">
+                            <button class="button button-block button-positive" type="submit">Log in</button>
+                        </label>
+                    </div>
+            </ion-item>
+  
+        </ion-list>
     </form>
   </ion-content>
 </ion-modal-view>
